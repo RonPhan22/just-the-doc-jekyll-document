@@ -3,6 +3,5 @@ title: Home
 layout: home
 ---
 
-This is a test website to document our project. Macbeth is a crazy person
-
+This is a test website to document our project. 
 
