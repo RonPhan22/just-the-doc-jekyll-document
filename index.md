@@ -3,6 +3,5 @@ title: Home
 layout: home
 ---
 
-This is a test website to document our project. 
-Macbeth
+This is a test website to yes
 
