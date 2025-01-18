@@ -3,5 +3,5 @@ title: TEJ3 Culmination
 layout: Project Documentation
 ---
 
-Coming soon...
+Great things coming soon...
 
