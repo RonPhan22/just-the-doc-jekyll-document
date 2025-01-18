@@ -4,5 +4,7 @@ layout: minimal
 nav_exclude: true
 ---
 
-This is a test website to yes
+# Project Description
+This project uses a Raspberry Pi 4 Model B, with the help of Python and circuits, we created an audio player, embedded into our RPi.
+
 
