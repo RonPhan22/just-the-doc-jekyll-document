@@ -1,7 +1,7 @@
 ---
-title: TEJ3 Culmination
-layout: Project Documentation
+title: home
+layout: home
 ---
 
-
+This is a test website to yes
 
