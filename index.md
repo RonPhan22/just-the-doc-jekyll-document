@@ -1,7 +1,7 @@
 ---
-title: Home
-layout: home
+title: Raspberry Pi Audio(.mp3) Player
+layout: Project Documentation
 ---
 
-This is a test website to yes
+Coming soon...
 
