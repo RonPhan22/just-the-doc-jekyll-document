@@ -1,5 +1,5 @@
 ---
-title: Raspberry Pi Audio(.mp3) Player
+title: TEJ3 Culmination
 layout: Project Documentation
 ---
 
