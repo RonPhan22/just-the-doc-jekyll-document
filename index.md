@@ -5,7 +5,7 @@ nav_exclude: true
 ---
 
 # Project Description
-This project uses a **Raspberry Pi 4 Model B**, with the help of Python and circuits and **two handsome young guys**, we created an **audio(.mp3) player**, embedded into our RPi.
+This project uses a **Raspberry Pi 4 Model B**, with the help of Python and circuits and **two handsome guys**, we created an **audio(.mp3) player**, embedded into our RPi.
 
 ## Project History
 * We first got a Raspberry Pi from Mr. Andrade named **Michael**, unfortunately, it was not up to our standard, so we got another one (owned by Dylan (my partner)), the same model but **younger and more handsome**, named **Michael 2.0**
@@ -20,6 +20,6 @@ A list of what you would need to recreate this project
 4. **32 GB micro SD card**
 5. **Keyboard and mouse**
 6. **Breadboard, power supply, buttons, and jumper wires (♂ to ♀)**
-7. ~~**two handsome young guys**~~
+7. ~~**two handsome guys**~~
 
 
