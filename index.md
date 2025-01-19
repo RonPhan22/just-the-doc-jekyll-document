@@ -21,10 +21,10 @@ This project uses a **Raspberry Pi 4 Model B** (RPi for short), with the help of
 ---
 
 {: .highlight }
-### **Project Setup**
+## **Project Setup**
 
 ---
-A list of what you would need to recreate this project
+A list of what you would need to recreate this project:
 1. **A handsome, functional Raspberry Pi**
 2. **Headphone/Speaker with jack cable**
 3. **Monitor**
