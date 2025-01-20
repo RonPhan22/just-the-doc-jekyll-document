@@ -29,7 +29,7 @@ A list of what you would need to recreate this project:
 4. **32 GB micro SD card**
 5. **Keyboard and mouse**
 6. **Breadboard, power supply, buttons, and jumper wires (♂ to ♀)**
-~~7. **two handsome guys**~~
+7. ~~**two handsome guys**~~
 
 {: .highlight }
 ## **Python Script**
