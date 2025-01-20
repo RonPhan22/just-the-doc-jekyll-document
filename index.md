@@ -31,6 +31,108 @@ A list of what you would need to recreate this project:
 6. **Breadboard, power supply, buttons, and jumper wires (♂ to ♀)**
 7. ~~**two handsome guys**~~
 
+{: .highlight }
+## **Python Script**
+
+---
+```python
+import RPi.GPIO as GPIO
+import subprocess
+import time
+import os
+
+# Pin configuration
+PLAY_PAUSE_BUTTON_PIN = 18
+NEXT_TRACK_BUTTON_PIN = 23
+music_folder = "<folder_path>"  # Path to folder with .mp3 files
+
+# Playback state
+is_playing = False
+current_track_index = 0
+tracks = []
+vlc_process = None
+
+# GPIO setup
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(PLAY_PAUSE_BUTTON_PIN, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+GPIO.setup(NEXT_TRACK_BUTTON_PIN, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+
+def load_tracks():
+    """Load all .mp3 files from the music folder."""
+    global tracks
+    tracks = sorted(
+        [os.path.join(music_folder, f) for f in os.listdir(music_folder) if f.endswith(".mp3")]
+    )
+    if not tracks:
+        print("No .mp3 files found in the music folder.")
+        exit(1)
+
+def start_vlc():
+    """Start VLC in RC mode."""
+    global vlc_process
+    vlc_process = subprocess.Popen(
+        ["cvlc", "--intf", "rc"],
+        stdin=subprocess.PIPE,
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL,
+        text=True
+    )
+
+def play_track(index):
+    """Send command to VLC to play a specific track."""
+    global is_playing
+    track_path = tracks[index]
+    print(f"Playing: {os.path.basename(track_path)}")
+    vlc_process.stdin.write(f"add {track_path}\n")
+    vlc_process.stdin.flush()
+    is_playing = True
+
+def toggle_play_pause(channel):
+    """Toggle between play and pause."""
+    global is_playing
+    if is_playing:
+        print("Pausing playback...")
+        vlc_process.stdin.write("pause\n")
+        vlc_process.stdin.flush()
+        is_playing = False
+    else:
+        print("Resuming playback...")
+        vlc_process.stdin.write("pause\n")  
+        vlc_process.stdin.flush()
+        is_playing = True
+
+def next_track(channel):
+    """Skip to the next track."""
+    global current_track_index
+    current_track_index = (current_track_index + 1) % len(tracks)
+    print("Skipping to next track...")
+    play_track(current_track_index)
+
+
+load_tracks()
+
+start_vlc()
+
+# Start playing the first track
+play_track(current_track_index)
+
+# Detects button presses with debounce
+GPIO.add_event_detect(PLAY_PAUSE_BUTTON_PIN, GPIO.RISING, callback= toggle_play_pause, bouncetime=100)
+GPIO.add_event_detect(NEXT_TRACK_BUTTON_PIN, GPIO.RISING, callback= next_track, bouncetime=100)
+
+try:
+    print("Press the play/pause button to toggle playback.")
+    print("Press the next track button to skip to the next track.")
+    while True:
+        time.sleep(0.1)  # Keeps the script running
+except KeyboardInterrupt:
+    print("Exiting...")
+finally:
+    if vlc_process:
+        vlc_process.terminate()
+    GPIO.cleanup()
+
+```
 
 [My Github](https://github.com/RonPhan22?tab=repositories){: .btn }
 
