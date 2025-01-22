@@ -8,7 +8,7 @@ nav_exclude: true
 ## **Project Description**
 
 ---
-This project uses a **Raspberry Pi 4 Model B** (RPi for short), with the help of Python and circuits and **two handsome guys**, we created an **audio (.mp3) player**, embedded into our RPi.
+This project uses a **Raspberry Pi 4 Model B** (RPi for short), with the help of Python and circuits and **two handsome guys**, we created an **audio (.mp3) player**.
 
 {: .highlight }
 ## **Project History**
