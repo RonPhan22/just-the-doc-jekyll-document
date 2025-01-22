@@ -14,7 +14,7 @@ This project uses a **Raspberry Pi 4 Model B** (RPi for short), with the help of
 ## **Project History**
 
 ---
-* We first got a Raspberry Pi from Mr. Andrade named **Michael**, unfortunately, it was not up to our standard, so we got another one (owned by Dylan, my partner), the same model but **younger and more handsome**, named **Michael 2.0**
+* We first got a Raspberry Pi named **Michael** from Mr. Andrade, our teacher. Unfortunately, it was not up to our standard, so we got another one (owned by Dylan, my partner), the same model but **younger and more handsome**, named **Michael 2.0**
 * We then tried to install **Volumio OS** (An operating system specifically made for audio and music playing) into Michael 2.0, but that means we need **more monitors and Micro SD Cards**, which also means that it is going to be **super tedious and makes the project more expensive**, we do not want that
 * We decided to embed a **Python script** into Michael 2.0 instead, which with the help of **buttons and wires**, we successfully created a Walkman, though in this case, **Sitman**, because no one wanted to walk around with the setup, We tried, learned it the hard way
 
@@ -29,13 +29,14 @@ A list of what you would need to recreate this project:
 4. **32 GB micro SD card**
 5. **Keyboard and mouse**
 6. **Breadboard, power supply, buttons, and jumper wires (♂ to ♀)**
-7. ~~**two handsome guys**~~
 
 {: .highlight }
 ## **Python Script**
 
 ---
 ```python
+# This is the Python Script used for this project. We believe it could need some improvement and minimalization so feel free to use it as a reference for your work. :)
+
 import RPi.GPIO as GPIO
 import subprocess
 import time
