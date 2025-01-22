@@ -36,7 +36,7 @@ A list of what you would need to recreate this project:
 ---
 ```python
 # This is the Python Script used for this project.
-# We believe it could use some improvement and minimalization, feel free to use it as a reference for your work. :)
+# We believe it could use some improvement, feel free to use it as a reference for your work. :)
 
 import RPi.GPIO as GPIO
 import subprocess
